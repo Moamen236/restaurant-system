@@ -382,7 +382,7 @@ section{
 
 @media (max-width: 768px) {
     .menu-items {
-        max-width: 420px;
+        max-width: 320px;
         margin-right: auto;
         margin-left: auto;
     }
