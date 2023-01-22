@@ -322,24 +322,27 @@ section{
 
 /* Modal */
 .btn-close{
-    background-image: none;
     font-size: 16px;
     font-weight: bold;
+    background: none;
+    background-color: var(--bs-primary);
+    opacity: 1;
+    padding: 4px 8px 12px !important;
 }
 #add-product .btn-close{
     position: absolute;
     top: 0;
-    right: 20px;
-    background-color: #fff;
-    padding: 4px 8px 10px;
+    right: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 0;
 }
 
 .btn-close::before {
     font-family: FontAwesome;
     content: "\58";
-    color: #000;
+    color: #fff;
 }
 /********************************* Checkout Page ****************************************/
 
@@ -382,7 +385,7 @@ section{
 
 @media (max-width: 768px) {
     .menu-items {
-        max-width: 320px;
+        max-width: 300px;
         margin-right: auto;
         margin-left: auto;
     }
