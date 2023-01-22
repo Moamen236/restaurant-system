@@ -361,4 +361,9 @@ section{
     .banner-content h1{
         font-size: 40px;
     }
+
+    .card .image{
+        width: 130px;
+        height: 120px;
+    }
 }
