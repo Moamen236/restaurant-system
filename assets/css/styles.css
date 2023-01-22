@@ -336,12 +336,20 @@ section{
     h2 {
         font-size: 22px;
     }
-    h6, h5, strong {
+    h6, h5{
         font-size: 16px;
     }
-    p, a {
+    strong, a, .card h6{
         font-size: 14px !important;
     }
+    p{
+        font-size: 14px !important;
+    }
+    .fs-5 {
+        font-size: 1rem !important;
+    }
+
+    /* Home */
     .navbar .navbar-brand img {
         width: 60px;
     }
@@ -361,9 +369,21 @@ section{
     .banner-content h1{
         font-size: 40px;
     }
-
-    .card .image{
+    .home .products .card p {
+        font-size: 12px !important;
+    }
+    .home .products .card .image{
         width: 130px;
         height: 120px;
+    }
+
+    /* Checkout */
+    .checkout .card .product .info .quantity-input .quantity-btn svg {
+        font-size: 14px;
+        padding-bottom: 2px;
+    }
+    .checkout .card .product .info .quantity-input .quantity-btn {
+        width: 24px;
+        height: 24px;
     }
 }
