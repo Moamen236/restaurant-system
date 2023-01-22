@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibn Alsham</title>
+    <meta name="keywords" content="..." />
+    <meta name="description" content="...">
+    <meta name="author" content="...">
+
+    <!-- site Favicon -->
+    <link rel="icon" href="..." sizes="32x32" />
+    <link rel="apple-touch-icon" href="..." />
+    <meta name="msapplication-TileImage" content="..." />
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="./assets/modules/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/modules/slick/slick.css">
+    <!-- <link rel="stylesheet" href="./assets/modules/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./assets/modules/bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./assets/modules/fontawesome/css/all.min.css">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div class="body-overlay d-none"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container">
+            <div class="d-flex justify-content-between w-100">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./assets/images/logo.png" alt="Bootstrap" width="80">
+                </a>
+                <div class="navbar-menu d-lg-flex justify-content-between align-items-center flex-grow-1 d-none">
+                    <ul class="navbar-nav mx-auto my-0">
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white active" aria-current="page" href="./index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white" href="#">نبذه عنا</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white">قوائمنا</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white">اتصل بنا</a>
+                        </li>
+                    </ul>
+                    <div class="btns d-flex align-items-center">
+                        <a href="#" class="text-white text-decoration-none">تسجيل الدخول</a>
+                        <button type="button" class="btn btn-main mx-3">حساب جديد</button>
+                    </div>
+                </div>
+                <button class="navbar-toggler border-0 mt-2" type="button" data-bs-toggle="modal" data-bs-target="#navbar-content">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="cart" class="dropdown dropdown-center d-lg-flex d-none justify-content-center flex-column px-0" role="button">
+                    <span id="toggle-show" class="dropdown-toggle position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-cart-shopping text-white fa-lg"></i>
+                        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-secondary text-dark">
+                            1
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-end" style="margin-top: -10px;"> <!--style="margin-top: -10px;"-->
+                        <li>
+                            <div class="product d-flex justify-content-between">
+                                <div class="image pe-2">
+                                    <img class="mx-0 my-auto" src="./assets/images/1.jpg" alt="Product">
+                                </div>
+                                <div class="info">
+                                    <a class="cart_product_name" href="#">وجبه رقبه ضاني مشوي+ ارز بالزنيب</a>
+                                    <p>
+                                        <strong> 500 ج.م </strong>
+                                        <br>
+                                        العدد : 1
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li>
+                            <div class="cart-footer row justify-content-between align-items-center">
+                                <p class="text-start mb-0 col"><strong>الاجمالى</strong></p>
+                                <p class="text-end mb-0 col"><strong><span id="react-cart-total-price">500</span> ج.م</strong></p>
+                            </div>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li>
+                            <a class="btn btn-main w-100" href="checkout.html">الدفع</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar on Mobile -->
+    <div class="modal fade" id="navbar-content" tabindex="-1" aria-labelledby="navbarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-start">
+                    <ul class="navbar-nav w-100 my-0">
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link active" aria-current="page" href="./index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link" href="#">نبذه عنا</a>
+                        </li>
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link">قوائمنا</a>
+                        </li>
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link ">اتصل بنا</a>
+                        </li>
+                    </ul>
+                    <div class="btns mt-3 d-flex align-items-center">
+                        <a href="#" class="text-decoration-none">تسجيل الدخول</a>
+                        <button type="button" class="btn btn-main mx-3">حساب جديد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="breadcrumb bg-light py-3">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-6">
+                    <h2 class="breadcrumb-title">الدفع</h2>
+                </div>
+                <div class="col-6">
+                    <ol class="breadcrumb mb-0 float-end">
+                        <li class="breadcrumb-item"><a href="./index.html">الرئيسية</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">الدفع</li>
+                    </ol>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="checkout-content">
+                        <div class="card">
+                            <div class="card-body card-p">
+                                <h5 class="card-title">بيانات الدفع</h5>
+                                <form action="" method="" id="order-form" class="mt-4">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="first-name" class="form-label">الاسم الاول *</label>
+                                            <input type="text" class="form-control rounded-2" id="first-name" name="first_name">
+                                        </div>
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="last-name" class="form-label">الاسم الاخير *</label>
+                                            <input type="text" class="form-control rounded-2" id="last-name" name="last_name">
+                                        </div>
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="email" class="form-label">البريد الالكترونى</label>
+                                            <input type="email" class="form-control rounded-2" id="email" name="email">
+                                        </div>
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="phone-number" class="form-label">رقم الهاتف *</label>
+                                            <input type="text" class="form-control rounded-2" id="phone-number" name="phone_number">
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="address" class="form-label">العنوان *</label>
+                                            <textarea rows="3" class="form-control rounded-2" id="address" name="address" placeholder="رقم المنزل والشقة ، الشارع ، اي علامة مميزة .."></textarea>
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="address" class="form-label">ملاحظات الطلب</label>
+                                            <textarea rows="3" class="form-control rounded-2" id="address" name="address" placeholder="مثال من فضلك لا تضيف بصل"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="text-end d-lg-block d-none">
+                                        <button type="submit" form="order-form" class="btn btn-main fw-bold px-4 py-2">إرسال الطلب</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 mt-xl-0 mt-4 pb-xl-0 pb-5">
+                    <!-- Products Information -->
+                    <div class="card">
+                        <div class="card-body card-p">
+                            <h5 class="card-title">تفاصيل الطلب</h5>
+                            <div class="products mt-4">
+                                <div class="product pb-3 mb-3 border border-bottom-2 border-top-0 border-start-0 border-end-0">
+                                    <div class="image d-flex align-items-center">
+                                        <img class="mx-0 my-auto border-2" src="./assets/images/1.jpg" alt="Product" width="90">
+                                        <p class="product_name mx-2 fw-bold">وجبه رقبه ضاني مشوي+ ارز بالزنيب</p>
+                                    </div>
+                                    <div class="info mt-3">
+                                        <div class="total d-flex justify-content-between align-items-center">
+                                            <div class="quantity-input border-0">
+                                                <button type="button" class="btn btn-main quantity-btn add-qty">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                                <span class="quantity-count mx-3">1</span>
+                                                <button type="button" class="btn btn-main quantity-btn subtract-qty" disable>
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button> 
+                                            </div>
+                                            <div class="total-price">
+                                                <strong class="text-primary fs-5"><span class="net-price" data-price="305">305.00</span> ج.م</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="image d-flex align-items-center">
+                                        <img class="mx-0 my-auto border-2" src="./assets/images/2.jpg" alt="Product" width="90">
+                                        <p class="product_name mx-2 fw-bold">وجبه انتركوت بالعضم +ارز بالزبيب</p>
+                                    </div>
+                                    <div class="info mt-3">
+                                        <div class="total d-flex justify-content-between align-items-center">
+                                            <div class="quantity-input border-0">
+                                                <button type="button" class="btn btn-main quantity-btn add-qty">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                                <span class="quantity-count mx-3">1</span>
+                                                <button type="button" class="btn btn-main quantity-btn subtract-qty" disable>
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button> 
+                                            </div>
+                                            <div class="total-price">
+                                                <strong class="text-primary fs-5"><span class="net-price" data-price="572">572.00</span> ج.م</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Total Price and Shipping Price -->
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">تفاصيل الدفع</h5>
+                            <div class="total mt-4">
+                                <div class="pb-2 mb-2 border border-bottom-2 border-top-0 border-start-0 border-end-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>المجموع</p>
+                                        <p><span class="total-unit-price">877.00 </span>ج.م</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>رسوم خدمة التوصيل</p>
+                                        <p><span>21.00 </span>ج.م</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fw-bold">الاجمالى</p>
+                                    <p class="fw-bold"><span>898.00 </span>ج.م</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Payment Method -->
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">وسيلة الدفع</h5>
+                            <div class="methods mt-4">
+                                <div class="mb-3 form-check d-flex align-items-center justify-content-between p-0">
+                                    <label class="form-check-label d-flex align-items-center" for="cash">
+                                        <i class="fa-solid fa-money-bills fa-lg"></i>
+                                        <p class="ms-2 mb-0">نقدا</p>
+                                    </label>
+                                    <div class="checkArea">
+                                        <input class="form-check-input radio" type="radio" name="payment_method" id="cash">
+                                    </div>
+                                </div>
+                                <div class="form-check d-flex align-items-center justify-content-between p-0">
+                                    <label class="form-check-label d-flex align-items-center" for="visa">
+                                        <i class="fa-brands fa-cc-visa fa-lg"></i>
+                                        <p class="ms-2 mb-0">دفع إلكتروني</p>
+                                    </label>
+                                    <div class="checkArea d-flex align-items-center">
+                                        <img src="./assets/images/visa.png" alt="visa" height="28" class="mt-2 mx-4">
+                                        <input class="form-check-input radio" type="radio" name="payment_method" id="visa">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button on Mobile -->
+        <div class="submit-btn bg-white border border-1 p-4 position-fixed bottom-0 w-100 d-lg-none d-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <button type="submit" form="order-form" class="btn btn-main fw-bold py-3 rounded-2 w-100">إرسال الطلب</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white pt-5 d-lg-block d-none">
+        <div class="container">
+            <div class="top-footer pb-5">
+                <div class="row justify-content-between align-items-start">
+                    <div class="col-lg-4">
+                        <div class="logo mb-3">
+                            <img src="./assets/images/logo.png" alt="" width="100">
+                        </div>
+                        <p>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>أوقات العمل</p>
+                        <div class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            <span class="me-2">كل يوم: <span>12PM - 12AM</span></span>
+                        </div>
+                        <div class="social-links d-flex mt-4">
+                            <a href="#" class="link facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="link twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="link instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="link whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>تواصل معنا</p>
+                        <div class="phone mb-2">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <span class="me-2">011111111111</span>
+                        </div>
+                        <div class="address mb-2">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="me-2">12 شارع محمد على - مدينة نصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-rights text-white text-center bg-darker py-4">
+            <p> Copyright 2023. All Rights Reserved. Ibn Alsham - 19669 | Designed & Powered by Nori Solutions ©</p>
+        </div>
+    </footer>
+    <!-- Footer Section -->
+
+    <!-- Modules JS -->
+    <script src="./assets/modules/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="./assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/modules/slick/slick.min.js"></script>
+    <script src="./assets/modules/fontawesome/js/all.min.js"></script>
+
+    <!-- Main Js -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

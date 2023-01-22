@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibn Alsham</title>
+    <meta name="keywords" content="..." />
+    <meta name="description" content="...">
+    <meta name="author" content="...">
+
+    <!-- site Favicon -->
+    <link rel="icon" href="..." sizes="32x32" />
+    <link rel="apple-touch-icon" href="..." />
+    <meta name="msapplication-TileImage" content="..." />
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="./assets/modules/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/modules/slick/slick.css">
+    <!-- <link rel="stylesheet" href="./assets/modules/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./assets/modules/bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./assets/modules/fontawesome/css/all.min.css">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div class="body-overlay d-none"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top w-100">
+        <div class="container">
+            <div class="d-flex justify-content-between w-100">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./assets/images/logo.png" alt="Bootstrap" width="80">
+                </a>
+                <!-- Navbar Menu -->
+                <div class="d-lg-flex justify-content-between align-items-center flex-grow-1 d-none">
+                    <ul class="navbar-nav mx-auto my-0">
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white active" aria-current="page" href="./index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white" href="#">نبذه عنا</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white">قوائمنا</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-white">اتصل بنا</a>
+                        </li>
+                    </ul>
+                    <div class="btns d-flex align-items-center">
+                        <a href="#" class="text-white text-decoration-none">تسجيل الدخول</a>
+                        <button type="button" class="btn btn-main mx-3">حساب جديد</button>
+                    </div>
+                </div>
+                <!-- Navbar toggler icon -->
+                <button class="navbar-toggler border-0 mt-2" type="button" data-bs-toggle="modal" data-bs-target="#navbar-content">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Cart Dropdown -->
+                <div id="cart" class="dropdown dropdown-center d-lg-flex d-none justify-content-center flex-column px-0" role="button">
+                    <span id="toggle-show" class="dropdown-toggle position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-cart-shopping text-white fa-lg"></i>
+                        <span class="cart-count-label position-absolute top-0 translate-middle badge rounded-pill bg-secondary text-dark">1</span>
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-end products" style="margin-top: -10px;">
+                        <li>
+                            <div class="product d-flex justify-content-between">
+                                <div class="image pe-2">
+                                    <img class="mx-0 my-auto" src="./assets/images/1.jpg" alt="Product">
+                                </div>
+                                <div class="info">
+                                    <a class="cart_product_name" href="#">وجبه رقبه ضاني مشوي+ ارز بالزنيب</a>
+                                    <p>
+                                        <strong> 500 ج.م </strong>
+                                        <br>
+                                        العدد : 1
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li>
+                            <div class="cart-footer row justify-content-between align-items-center">
+                                <p class="text-start mb-0 col"><strong>الاجمالى</strong></p>
+                                <p class="text-end mb-0 col"><strong><span id="react-cart-total-price">500</span> ج.م</strong></p>
+                            </div>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <li>
+                            <a class="btn btn-main w-100" href="./checkout.html">تنفيذ الطلب</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar toggle on Mobile -->
+    <div class="modal fade" id="navbar-content" tabindex="-1" aria-labelledby="navbarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-start">
+                    <ul class="navbar-nav w-100 my-0">
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link active" aria-current="page" href="./index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link" href="#">نبذه عنا</a>
+                        </li>
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link">قوائمنا</a>
+                        </li>
+                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
+                            <a class="nav-link ">اتصل بنا</a>
+                        </li>
+                    </ul>
+                    <div class="btns mt-3 d-flex align-items-center">
+                        <a href="#" class="text-decoration-none">تسجيل الدخول</a>
+                        <button type="button" class="btn btn-main mx-3">حساب جديد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="home">
+        <!-- Banner Section -->
+        <div class="banner">
+            <div class="banner-content">
+                <div class="container">
+                    <h1>استمتع بتجربة الطعام اللذيذ</h1>
+                    <p>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور  أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . </p>
+                    <button type="button" class="btn btn-main me-3">اطلب الان</button>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Section -->
+    
+        <!-- Menu Section -->
+        <section class="menu">
+            <div class="container">
+                <div class="menu-nav">
+                    <div class="row justify-content-between align-items-start">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="head">
+                                <h2>قوائمنا</h2>
+                                <p>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="menu-items d-flex flex-wrap justify-content-between tab-list" role="tablist"> <!--  class="menu-items"-->
+                                <div class="item" role="presentation">
+                                    <h5 class="active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" role="tab" aria-controls="one-tab-pane" aria-selected="true">وجبات لحوم مدخنه</h4>
+                                </div>
+                                <div class="item" role="presentation">
+                                    <h5 id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" role="tab" aria-controls="two-tab-pane" aria-selected="false">وجبات فراخ</h4>
+                                </div>
+                                <div class="item" role="presentation">
+                                    <h5 id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" role="tab" aria-controls="three-tab-pane" aria-selected="false">المقبلات</h4>
+                                </div>
+                                <div class="item" role="presentation">
+                                    <h5 id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" role="tab" aria-controls="four-tab-pane" aria-selected="false">الطواجن</h4>
+                                </div>
+                                <div class="item" role="presentation">
+                                    <h5 id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" role="tab" aria-controls="five-tab-pane" aria-selected="false">مشويات بالكيلو</h4>
+                                </div>
+                                <div class="item" role="presentation">
+                                    <h5 id="six-tab" data-bs-toggle="tab" data-bs-target="#six-tab-pane" role="tab" aria-controls="six-tab-pane" aria-selected="false">وجبات مشاوي</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products mt-lg-5 mt-4">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab" tabindex="0">
+                            <div class="row align-content-stretch align-items-stretch">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/1.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه موزه بالعظم مشويه + ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( موزه ضاني متبله بتتبيلة الملكية تقدم مع ارز الذهبية وصوص دقوس والخبز الصاج )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">305 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/2.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه رقبه ضاني مشوي+ ارز بالزنيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + عسل+ عيش + صوص احمر (دقوس) ( الوزن نئ 1100)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">572 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/3.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه كتف ضاني مشوي+ ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + عسل+ عيش + صوص احمر (دقوس) ( الوزن نئ 1100)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">641 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه انتركوت بالعضم +ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + صوص احمر + عسل + عيش (الوزن قبل التسويه1.300 ك)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">762 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/5.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">ربع فرخه مشوية ع الفحم (صدر)</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( صدر مشوي متبل طازج علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">150 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/6.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه نصف فرخة مشوية ع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">101 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/7.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه فرخة مشويةع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">222 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/8.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">كفتة (كباب) بالصنوبر</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( اسياخ من كفتة مشوية متبل بطريقة مميزه غنية باصنوبر تقدم مع عيش وبصل وطماطم وفلفل )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">416 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
+                            <div class="row align-content-stretch align-items-stretch">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/5.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">ربع فرخه مشوية ع الفحم (صدر)</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( صدر مشوي متبل طازج علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">150 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/6.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه نصف فرخة مشوية ع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">101 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/7.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه فرخة مشويةع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">222 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/8.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">كفتة (كباب) بالصنوبر</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( اسياخ من كفتة مشوية متبل بطريقة مميزه غنية باصنوبر تقدم مع عيش وبصل وطماطم وفلفل )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">416 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="three-tab-pane" role="tabpanel" aria-labelledby="three-tab" tabindex="0">
+                            <div class="row align-content-stretch align-items-stretch">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/3.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه كتف ضاني مشوي+ ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + عسل+ عيش + صوص احمر (دقوس) ( الوزن نئ 1100)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">641 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه انتركوت بالعضم +ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + صوص احمر + عسل + عيش (الوزن قبل التسويه1.300 ك)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">762 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/5.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">ربع فرخه مشوية ع الفحم (صدر)</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( صدر مشوي متبل طازج علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">150 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/6.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه نصف فرخة مشوية ع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">101 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="four-tab-pane" role="tabpanel" aria-labelledby="four-tab" tabindex="0">
+                            <div class="row align-content-stretch align-items-stretch">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/2.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه رقبه ضاني مشوي+ ارز بالزنيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + عسل+ عيش + صوص احمر (دقوس) ( الوزن نئ 1100)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">572 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/3.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه كتف ضاني مشوي+ ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + عسل+ عيش + صوص احمر (دقوس) ( الوزن نئ 1100)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">641 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه انتركوت بالعضم +ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + صوص احمر + عسل + عيش (الوزن قبل التسويه1.300 ك)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">762 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/5.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">ربع فرخه مشوية ع الفحم (صدر)</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( صدر مشوي متبل طازج علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">150 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/6.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه نصف فرخة مشوية ع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">101 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/7.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه فرخة مشويةع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">222 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/8.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">كفتة (كباب) بالصنوبر</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( اسياخ من كفتة مشوية متبل بطريقة مميزه غنية باصنوبر تقدم مع عيش وبصل وطماطم وفلفل )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">416 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="five-tab-pane" role="tabpanel" aria-labelledby="five-tab" tabindex="0">
+                            <div class="row align-content-stretch align-items-stretch">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/5.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">ربع فرخه مشوية ع الفحم (صدر)</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( صدر مشوي متبل طازج علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">150 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/6.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه نصف فرخة مشوية ع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">101 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/7.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه فرخة مشويةع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">222 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/8.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">كفتة (كباب) بالصنوبر</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( اسياخ من كفتة مشوية متبل بطريقة مميزه غنية باصنوبر تقدم مع عيش وبصل وطماطم وفلفل )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">416 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="six-tab-pane" role="tabpanel" aria-labelledby="six-tab" tabindex="0">
+                            <div class="row align-content-stretch align-items-stretch">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه انتركوت بالعضم +ارز بالزبيب</h6>
+                                                    <p class="card-text text-gray mb-lg-4">تقدم مع صوص ابيض + صوص احمر + عسل + عيش (الوزن قبل التسويه1.300 ك)</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">762 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/5.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">ربع فرخه مشوية ع الفحم (صدر)</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( صدر مشوي متبل طازج علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">150 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/6.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه نصف فرخة مشوية ع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">101 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="card shadow border-0 mb-4">
+                                        <div class="row gx-md-1 gy-md-0 g-0">
+                                            <div class="col-md-12 col-4 align-self-center">
+                                                <img src="assets/images/7.jpg" class="img-fluid rounded-2 mx-md-0 mx-2" alt="...">
+                                            </div>
+                                            <div class="col-md-12 col-8">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">وجبه فرخة مشويةع الفحم</h6>
+                                                    <p class="card-text text-gray mb-lg-4">( فراخ متبل طازج مشوية علي فحم تقدم مع بطاطس وارز وصوص تومية وعيش )</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <strong class="price text-primary fs-5">222 ج.م</strong>
+                                                        <a href="#" class="btn btn-main px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#add-product">أضف</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Menu Section -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white pt-5 d-lg-block d-none">
+        <div class="container">
+            <div class="top-footer pb-5">
+                <div class="row justify-content-between align-items-start">
+                    <div class="col-lg-4">
+                        <div class="logo mb-3">
+                            <img src="./assets/images/logo.png" alt="" width="100">
+                        </div>
+                        <p>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>أوقات العمل</p>
+                        <div class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            <span class="me-2">كل يوم: <span>12PM - 12AM</span></span>
+                        </div>
+                        <div class="social-links d-flex mt-4">
+                            <a href="#" class="link facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="link twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="link instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="link whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>تواصل معنا</p>
+                        <div class="phone mb-2">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <span class="me-2">011111111111</span>
+                        </div>
+                        <div class="address mb-2">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="me-2">12 شارع محمد على - مدينة نصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-rights text-white text-center bg-darker py-4">
+            <p> Copyright 2023. All Rights Reserved. Ibn Alsham - 19669 | Designed & Powered by Nori Solutions ©</p>
+        </div>
+    </footer>
+    <!-- Footer Section -->
+
+    <!-- Modal Add Product -->
+    <div class="modal fade" id="add-product" tabindex="-1" aria-labelledby="add-product-Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body position-relative px-0 pt-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="card border-0 w-100">
+                        <img src="./assets/images/1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">وجبه موزه بالعظم مشويه + ارز بالزبيب</h5>
+                            <p class="card-text text-gray mb-lg-4">( موزه ضاني متبله بتتبيلة الملكية تقدم مع ارز الذهبية وصوص دقوس والخبز الصاج )</p>
+                            <div class="total d-flex justify-content-between align-items-center">
+                                <div class="qty">
+                                    <div class="quantity-input border-1">
+                                        <button type="button" class="btn quantity-btn add-qty">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                        <span class="quantity-count mx-3">1</span>
+                                        <button type="button" class="btn quantity-btn subtract-qty" disable>
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button> 
+                                    </div>
+                                </div>
+                                <div class="total-price">
+                                    <strong class="text-primary fs-5"><span class="net-price" data-price="305">305</span> ج.م</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-main fw-bold w-100 py-3 add-product-to-cart" data-price="305">أضف</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Cart in Mobile -->
+    <div id="submit-order" class="bg-white border border-1 p-4 position-fixed bottom-0 w-100 d-lg-none d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <a href="./checkout.html" class="btn btn-main fw-bold py-3 rounded-2 w-100 d-flex justify-content-between align-items-center">
+                        <span class="position-relative">
+                            <i class="fa-solid fa-cart-shopping text-white fa-lg"></i>
+                            <span class="cart-count-label position-absolute top-0 translate-middle badge rounded-pill bg-secondary text-dark">1</span>
+                        </span>
+                        <span>تنفيذ الطلب</span>
+                        <span class="order-price">
+                            <span class="net-price">326</span>ج.م
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modules JS -->
+    <script src="./assets/modules/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="./assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/modules/slick/slick.min.js"></script>
+    <script src="./assets/modules/fontawesome/js/all.min.js"></script>
+
+    <!-- Main Js -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
