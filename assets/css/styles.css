@@ -6,12 +6,6 @@
 }
 
 @font-face {
-    font-family: cairo-Light;
-    src: url('../fonts/Cairo-Light.ttf');
-    font-weight: Light;
-}
-
-@font-face {
     font-family: cairo-bold;
     src: url('../fonts/Cairo-Bold.ttf');
     font-weight: bold;
@@ -22,12 +16,6 @@
     --bs-primary-100: #621a24;
     --bs-primary-200: #571720;
     --bs-primary-300: #4c141c;
-    --bs-primary-400: #411118;
-    --bs-primary-500: #360e14;
-    --bs-primary-600: #2b0b10;
-    --bs-primary-700: #20080c;
-    --bs-primary-800: #150508;
-    --bs-primary-900: #0a0204;
     --bs-primary-rgb: 109, 29, 41;
     --bs-secondary: #D2B8A9;
     --bs-secondary-rgba: 210, 184, 169;
@@ -58,6 +46,17 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, strong, b {
 a {
     text-decoration: none;
     color: #212529;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+a.text-primary:hover {
+    color: var(--bs-primary-300) !important;
+}
+a.text-dark:hover {
+    color: #222 !important
 }
 .btn:active {
     border-color: #fff !important
@@ -86,6 +85,9 @@ a {
 .text-gray {
     color: var(--bs-gray-text);
 }
+.text-primary {
+    color: var(--bs-primary) !important;
+}
 .bg-dark {
     background-color: #222222 !important;
 }
@@ -96,12 +98,12 @@ a {
     background-color: var(--bs-secondary) !important;
 }
 .bg-light {
-    background-color: #e8e8e8 !important;
+    background-color: #f7f7f7 !important;
 }
 .card-p{
     padding: 30px !important;
 }
-input:not(input[type=radio]) {
+input:not(input[type=radio], .form-check-input) {
     background-color: transparent;
     border: 1px solid #ededed;
     color: #222;
@@ -165,6 +167,21 @@ main{
 }
 .navbar .navbar-brand img{
     width: 80px;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+    color: var(--bs-secondary) !important;
+}
+
+/* login modal */
+#login .modal-content{
+    min-width: 380px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#login .modal-content p{
+    font-size: 14px;
 }
 
 /********************************* Home Page ****************************************/
@@ -319,7 +336,8 @@ section{
     width: 25px;
     height: 25px;
 }
-.checkout .card .methods input[type=radio]:checked {
+input[type=radio]:checked,
+input[type=checkbox]:checked {
     background-color: var(--bs-secondary);
     border-color: var(--bs-secondary) !important;
 }
@@ -332,7 +350,62 @@ section{
     font-size: 20px;
 }
 
+/********************************* About Us Page ****************************************/
+.about-us .image-wrapper{
+    width: 100%;
+    height: 250px;
+    background-color: var(--bs-primary);
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: -1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+
+.contact-us .contact-info .icon{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #fff;
+    background-color: var(--bs-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 2px 3px rgba(var(--bs-primary-rgb), 0.2),        -6px -6px 2px 3px rgba(var(--bs-primary-rgb), 0.2);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.contact-us .contact-info .card:hover .icon{
+    box-shadow: none;
+}
+
+.contact-us .contact-info .icon svg{
+    font-size: 30px;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
+    h1{
+        font-size: 26px;
+    }
     h2 {
         font-size: 22px;
     }
@@ -367,7 +440,7 @@ section{
         font-size: 18px !important;
     }
     .banner-content h1{
-        font-size: 40px;
+        font-size: 40px !important;
     }
     .home .products .card p {
         font-size: 12px !important;
@@ -385,5 +458,12 @@ section{
     .checkout .card .product .info .quantity-input .quantity-btn {
         width: 24px;
         height: 24px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    /* Contact Us */
+    .contact-us .contact-info .d-flex {
+        width: 100%;
     }
 }

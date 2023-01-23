@@ -37,16 +37,16 @@
                 <div class="navbar-menu d-lg-flex justify-content-between align-items-center flex-grow-1 d-none">
                     <ul class="navbar-nav mx-auto my-0">
                         <li class="nav-item px-2">
-                            <a class="nav-link fw-semibold text-white" aria-current="page" href="./index.html">الرئيسية</a>
+                            <a class="nav-link text-white fw-semibold" aria-current="page" href="./index.html">الرئيسية</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link fw-semibold text-white" href="./about-us.html">نبذه عنا</a>
+                            <a class="nav-link text-white fw-semibold" href="./about-us.html">نبذه عنا</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link fw-semibold text-white" href="./index.html">قوائمنا</a>
+                            <a class="nav-link text-white fw-semibold" href="./index.html">قوائمنا</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link fw-semibold text-white" href="./contact-us.html">اتصل بنا</a>
+                            <a class="nav-link text-white fw-semibold active" href="./contact-us.html">اتصل بنا</a>
                         </li>
                     </ul>
                     <div class="btns d-flex align-items-center">
@@ -116,7 +116,7 @@
                             <a class="nav-link fw-semibold" href="./index.html">قوائمنا</a>
                         </li>
                         <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
-                            <a class="nav-link fw-semibold" href="./contact-us.html">اتصل بنا</a>
+                            <a class="nav-link fw-semibold active" href="./contact-us.html">اتصل بنا</a>
                         </li>
                     </ul>
                     <div class="btns mt-3 d-flex align-items-center">
@@ -133,12 +133,12 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-6">
-                    <p class="breadcrumb-title mb-0 fw-semibold fs-4">الدفع</p>
+                    <p class="breadcrumb-title mb-0 fw-semibold fs-4">اتصل بنا</p>
                 </div>
                 <div class="col-6">
                     <ol class="breadcrumb mb-0 float-end">
                         <li class="breadcrumb-item"><a href="./index.html">الرئيسية</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">الدفع</li>
+                        <li class="breadcrumb-item active" aria-current="page">اتصل بنا</li>
                     </ol>
                     <div class="clearfix"></div>
                 </div>
@@ -146,167 +146,89 @@
         </div>
     </nav>
 
-    <main class="checkout">
+    <main class="contact-us">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-8">
-                    <div class="checkout-content">
-                        <div class="card">
-                            <div class="card-body card-p">
-                                <h5 class="card-title">بيانات الدفع</h5>
-                                <form action="" method="" id="order-form" class="mt-4">
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-3">
-                                            <label for="first-name" class="form-label">الاسم الاول *</label>
-                                            <input type="text" class="form-control rounded-2" id="first-name" name="first_name">
-                                        </div>
-                                        <div class="col-lg-6 mb-3">
-                                            <label for="last-name" class="form-label">الاسم الاخير *</label>
-                                            <input type="text" class="form-control rounded-2" id="last-name" name="last_name">
-                                        </div>
-                                        <div class="col-lg-6 mb-3">
-                                            <label for="email" class="form-label">البريد الالكترونى</label>
-                                            <input type="email" class="form-control rounded-2" id="email" name="email">
-                                        </div>
-                                        <div class="col-lg-6 mb-3">
-                                            <label for="phone-number" class="form-label">رقم الهاتف *</label>
-                                            <input type="text" class="form-control rounded-2" id="phone-number" name="phone_number">
-                                        </div>
-                                        <div class="col-lg-12 mb-3">
-                                            <label for="address" class="form-label">العنوان *</label>
-                                            <textarea rows="3" class="form-control rounded-2" id="address" name="address" placeholder="رقم المنزل والشقة ، الشارع ، اي علامة مميزة .."></textarea>
-                                        </div>
-                                        <div class="col-lg-12 mb-3">
-                                            <label for="address" class="form-label">ملاحظات الطلب</label>
-                                            <textarea rows="3" class="form-control rounded-2" id="address" name="address" placeholder="مثال من فضلك لا تضيف بصل"></textarea>
-                                        </div>
+            <div class="row justify-content-between">
+                <div class="col-lg-12 order-lg-0 order-1">
+                    <div class="contact-info row flex-lg-row flex-column justify-content-between align-items-stretch mb-2 mt-lg-0 mt-3">
+                        <div class="col-4 d-flex">
+                            <div class="card w-100 text-center py-3 mb-3">
+                                <div class="card-body">
+                                    <div class="icon mb-3">
+                                        <i class="fa-solid fa-phone-flip"></i>
                                     </div>
-                                    <div class="text-end d-lg-block d-none">
-                                        <button type="submit" form="order-form" class="btn btn-main fw-bold px-4 py-2">إرسال الطلب</button>
+                                    <h5 class="card-title mb-2">رقم الهاتف</h5>
+                                    <p class="card-text">
+                                        <a href="tel:(+65)485965789" class="d-block">(+65) - 48596 - 5789</a>
+                                        <a href="tel:+65-48596-5789" class="d-block">+65-48596-5789</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex">
+                            <div class="card w-100 text-center py-3 mb-3">
+                                <div class="card-body">
+                                    <div class="icon mb-3">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <h5 class="card-title mb-2">البريد الالكترونى</h5>
+                                    <p class="card-text">
+                                        <a href="mailto:info.example@gmail.com" class="d-block">info.example@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex">
+                            <div class="card w-100 text-center py-3 mb-3">
+                                <div class="card-body">
+                                    <div class="icon mb-3">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <h5 class="card-title mb-2">العنوان</h5>
+                                    <p class="card-text">31 المنطقة (و) - البوابة الثانية (خفرع) - حدائق الأهرام - الجيزة - مصر.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 order-lg-1 order-0">
+                    <div class="card p-3">
+                        <div class="card-body">
+                            <div class="contact-head">
+                                <h6 class="text-primary d-md-none d-block">اتصل بنا</h6>
+                                <h1>ابقى على تواصل</h1>
+                                <p class="text-gray mt-3">لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت</p>
+                            </div>
+                            <div class="contact-form mt-4">
+                                <form action="">
+                                    <div class="mb-3">
+                                        <label for="first-name" class="form-label">الاسم <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control rounded-2" id="first-name" name="first_name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">البريد الالكترونى</label>
+                                        <input type="email" class="form-control rounded-2" id="email" name="email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone-number" class="form-label">رقم الهاتف <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control rounded-2" id="phone-number" name="phone_number" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">الرسالة <span class="text-danger">*</span></label>
+                                        <textarea rows="3" class="form-control rounded-2" id="message" name="message" required></textarea>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" form="order-form" class="btn btn-main fw-bold px-4 py-2">إرسال</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 mt-xl-0 mt-4 pb-xl-0 pb-5">
-                    <!-- Products Information -->
-                    <div class="card">
-                        <div class="card-body card-p">
-                            <h5 class="card-title">تفاصيل الطلب</h5>
-                            <div class="products mt-4">
-                                <div class="product pb-3 mb-3 border border-bottom-2 border-top-0 border-start-0 border-end-0">
-                                    <div class="d-flex align-items-center">
-                                        <img class="mx-0 my-auto border-2" src="./assets/images/1.jpg" alt="Product" width="90">
-                                        <h6 class="product_name mx-2 fw-bold">وجبه رقبه ضاني مشوي+ ارز بالزنيب</h6>
-                                    </div>
-                                    <div class="info mt-3">
-                                        <div class="total d-flex justify-content-between align-items-center">
-                                            <div class="quantity-input border-0">
-                                                <button type="button" class="btn btn-main quantity-btn add-qty">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </button>
-                                                <span class="quantity-count mx-3">1</span>
-                                                <button type="button" class="btn btn-main quantity-btn subtract-qty" disable>
-                                                    <i class="fa-solid fa-minus"></i>
-                                                </button> 
-                                            </div>
-                                            <div class="total-price">
-                                                <strong class="text-primary fs-5"><span class="net-price" data-price="305">305.00</span> ج.م</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="d-flex align-items-center">
-                                        <img class="mx-0 my-auto border-2" src="./assets/images/2.jpg" alt="Product" width="90">
-                                        <h6 class="product_name mx-2 fw-bold">وجبه انتركوت بالعضم +ارز بالزبيب</h6>
-                                    </div>
-                                    <div class="info mt-3">
-                                        <div class="total d-flex justify-content-between align-items-center">
-                                            <div class="quantity-input border-0">
-                                                <button type="button" class="btn btn-main quantity-btn add-qty">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </button>
-                                                <span class="quantity-count mx-3">1</span>
-                                                <button type="button" class="btn btn-main quantity-btn subtract-qty" disable>
-                                                    <i class="fa-solid fa-minus"></i>
-                                                </button> 
-                                            </div>
-                                            <div class="total-price">
-                                                <strong class="text-primary fs-5"><span class="net-price" data-price="572">572.00</span> ج.م</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Total Price and Shipping Price -->
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">تفاصيل الدفع</h5>
-                            <div class="total mt-4">
-                                <div class="pb-2 mb-2 border border-bottom-2 border-top-0 border-start-0 border-end-0">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p>المجموع</p>
-                                        <p><span class="total-unit-price">877.00 </span>ج.م</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p>رسوم خدمة التوصيل</p>
-                                        <p><span>21.00 </span>ج.م</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p class="fw-bold">الاجمالى</p>
-                                    <p class="fw-bold"><span>898.00 </span>ج.م</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Payment Method -->
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">وسيلة الدفع</h5>
-                            <div class="methods mt-4">
-                                <div class="mb-3 form-check d-flex align-items-center justify-content-between p-0">
-                                    <label class="form-check-label d-flex align-items-center" for="cash">
-                                        <i class="fa-solid fa-money-bills fa-lg"></i>
-                                        <p class="ms-2 mb-0">نقدا</p>
-                                    </label>
-                                    <div class="checkArea">
-                                        <input class="form-check-input radio" type="radio" name="payment_method" id="cash">
-                                    </div>
-                                </div>
-                                <div class="form-check d-flex align-items-center justify-content-between p-0">
-                                    <label class="form-check-label d-flex align-items-center" for="visa">
-                                        <i class="fa-brands fa-cc-visa fa-lg"></i>
-                                        <p class="ms-2 mb-0">دفع إلكتروني</p>
-                                    </label>
-                                    <div class="checkArea d-flex align-items-center">
-                                        <img src="./assets/images/visa.png" alt="visa" height="28" class="mt-2 mx-4">
-                                        <input class="form-check-input radio" type="radio" name="payment_method" id="visa">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Submit Button on Mobile -->
-        <div class="submit-btn bg-white border border-1 p-4 position-fixed bottom-0 w-100 d-lg-none d-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 p-0">
-                        <button type="submit" form="order-form" class="btn btn-main fw-bold py-3 rounded-2 w-100">إرسال الطلب</button>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
-
+    
     <!-- Footer Section -->
     <footer class="bg-dark text-white pt-5 d-lg-block d-none">
         <div class="container">
