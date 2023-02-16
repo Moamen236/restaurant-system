@@ -24,8 +24,15 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
+<body class="position-relative">
     <div class="body-overlay d-none"></div>
+
+    <div class="empty-checkout-cart">
+        <div class="modal-cart bg-white p-4 border text-center d-flex flex-column justify-content-center align-items-center rounded">
+            <h3>Less than the minimum order</h3>
+            <button class="btn btn-main w-100 fw-bold mt-3 py-3">Add More</button>
+        </div>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark">
@@ -209,6 +216,9 @@
                                                 <span class="quantity-count mx-3">1</span>
                                                 <button type="button" class="btn btn-main quantity-btn subtract-qty" disable>
                                                     <i class="fa-solid fa-minus"></i>
+                                                </button> 
+                                                <button type="button" class="btn btn-danger quantity-btn subtract-qty mx-2">
+                                                    <i class="fa-solid fa-trash-can"></i>
                                                 </button> 
                                             </div>
                                             <div class="total-price">

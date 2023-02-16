@@ -20,6 +20,7 @@
     <!-- <link rel="stylesheet" href="./assets/modules/bootstrap/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./assets/modules/bootstrap/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="./assets/modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
     <!-- Main Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -61,22 +62,73 @@
                 </button>
                 <!-- Cart Dropdown -->
                 <div id="cart" class="dropdown dropdown-center d-lg-flex d-none justify-content-center flex-column px-0" role="button">
-                    <span id="toggle-show" class="dropdown-toggle position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="toggle-show" class="dropdown-toggle position-relative" aria-expanded="false">
                         <i class="fa-solid fa-cart-shopping text-white fa-lg"></i>
                         <span class="cart-count-label position-absolute top-0 translate-middle badge rounded-pill bg-secondary text-dark">1</span>
                     </span>
-                    <ul class="dropdown-menu dropdown-menu-end products" style="margin-top: -10px;">
-                        <li>
-                            <div class="product d-flex justify-content-between">
+                    <ul class="dropdown-menu dropdown-menu-end" style="margin-top: -10px;">
+                        <li class="product">
+                            <div class="d-flex justify-content-between">
                                 <div class="image pe-2">
                                     <img class="mx-0 my-auto" src="./assets/images/1.jpg" alt="Product">
                                 </div>
                                 <div class="info">
                                     <a class="cart_product_name" href="#">وجبه رقبه ضاني مشوي+ ارز بالزنيب</a>
-                                    <p>
-                                        <strong> 500 ج.م </strong>
-                                        <br>
-                                        العدد : 1
+                                    <p class="d-flex justify-content-between align-items-end">
+                                        <span>
+                                            <strong> 500 ج.م </strong>
+                                            <br>
+                                            العدد : 1
+                                        </span>
+                                        <span>
+                                            <button type="button" class="btn btn-danger px-2 py-1 remove-btn">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </button> 
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product">
+                            <div class="d-flex justify-content-between">
+                                <div class="image pe-2">
+                                    <img class="mx-0 my-auto" src="./assets/images/1.jpg" alt="Product">
+                                </div>
+                                <div class="info">
+                                    <a class="cart_product_name" href="#">وجبه رقبه ضاني مشوي+ ارز بالزنيب</a>
+                                    <p class="d-flex justify-content-between align-items-end">
+                                        <span>
+                                            <strong> 500 ج.م </strong>
+                                            <br>
+                                            العدد : 1
+                                        </span>
+                                        <span>
+                                            <button type="button" class="btn btn-danger px-2 py-1 remove-btn">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </button> 
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product">
+                            <div class="d-flex justify-content-between">
+                                <div class="image pe-2">
+                                    <img class="mx-0 my-auto" src="./assets/images/1.jpg" alt="Product">
+                                </div>
+                                <div class="info">
+                                    <a class="cart_product_name" href="#">وجبه رقبه ضاني مشوي+ ارز بالزنيب</a>
+                                    <p class="d-flex justify-content-between align-items-end">
+                                        <span>
+                                            <strong> 500 ج.م </strong>
+                                            <br>
+                                            العدد : 1
+                                        </span>
+                                        <span>
+                                            <button type="button" class="btn btn-danger px-2 py-1 remove-btn">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </button> 
+                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -155,25 +207,33 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <div class="menu-items d-flex flex-wrap justify-content-between tab-list" role="tablist"> <!--  class="menu-items"-->
-                                <div class="item" role="presentation">
-                                    <h5 class="active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" role="tab" aria-controls="one-tab-pane" aria-selected="true">وجبات لحوم مدخنه</h4>
+                            <div class="swiper">
+                                <div class="swiper-wrapper align-items-center tab-list" role="tablist">
+                                    <div class="swiper-slide">
+                                        <div class="item" role="presentation">
+                                            <h5 class="active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane" role="tab" aria-controls="one-tab-pane" aria-selected="true">وجبات لحوم مدخنه</h4>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h5 id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" role="tab" aria-controls="two-tab-pane" aria-selected="false">وجبات فراخ</h4>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h5 id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" role="tab" aria-controls="three-tab-pane" aria-selected="false">المقبلات</h4>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h5 id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" role="tab" aria-controls="four-tab-pane" aria-selected="false">الطواجن</h4>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h5 id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" role="tab" aria-controls="five-tab-pane" aria-selected="false">مشويات بالكيلو</h4>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h5 id="six-tab" data-bs-toggle="tab" data-bs-target="#six-tab-pane" role="tab" aria-controls="six-tab-pane" aria-selected="false">وجبات مشاوي</h4>
+                                    </div>
                                 </div>
-                                <div class="item" role="presentation">
-                                    <h5 id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane" role="tab" aria-controls="two-tab-pane" aria-selected="false">وجبات فراخ</h4>
-                                </div>
-                                <div class="item" role="presentation">
-                                    <h5 id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane" role="tab" aria-controls="three-tab-pane" aria-selected="false">المقبلات</h4>
-                                </div>
-                                <div class="item" role="presentation">
-                                    <h5 id="four-tab" data-bs-toggle="tab" data-bs-target="#four-tab-pane" role="tab" aria-controls="four-tab-pane" aria-selected="false">الطواجن</h4>
-                                </div>
-                                <div class="item" role="presentation">
-                                    <h5 id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" role="tab" aria-controls="five-tab-pane" aria-selected="false">مشويات بالكيلو</h4>
-                                </div>
-                                <div class="item" role="presentation">
-                                    <h5 id="six-tab" data-bs-toggle="tab" data-bs-target="#six-tab-pane" role="tab" aria-controls="six-tab-pane" aria-selected="false">وجبات مشاوي</h4>
-                                </div>
+
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
                             </div>
                         </div>
                     </div>
@@ -1024,6 +1084,7 @@
     <script src="./assets/modules/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/modules/slick/slick.min.js"></script>
     <script src="./assets/modules/fontawesome/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- Main Js -->
     <script src="./assets/js/script.js"></script>

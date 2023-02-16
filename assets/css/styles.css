@@ -149,10 +149,26 @@ main{
 .navbar .dropdown-menu{
     width: 300px;
     padding: 10px 15px;
+    cursor: default;
+}
+.navbar .dropdown-menu .product{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+    padding-top: 10px;
 }
 .navbar .dropdown-menu img{
     max-height: 100px;
     max-width: 70px;
+}
+#cart.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+#cart .dropdown-menu {
+    margin-top: 0;
+    top: 100%;
+    --bs-position: end;
+    left: 0;
+    right: auto;
 }
 .navbar-toggler-icon {
     background-image: none;
@@ -262,6 +278,46 @@ section{
     -ms-transform: translateY(-10px);
     -o-transform: translateY(-10px);
 }
+
+.swiper{
+    padding: 0 40px;
+    z-index: 0;
+}
+.swiper-slide{
+    width: fit-content;
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-rtl .swiper-button-prev,
+.swiper-rtl .swiper-button-next{
+    background: #fff !important;
+    height: 46px !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after{
+    font-size: 12px;
+    font-weight: bolder;
+    width: 25px;
+    height: 25px;
+    background: var(--bs-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-rtl .swiper-button-prev {
+    right: 0;
+}
+
+.swiper-rtl .swiper-button-next {
+    left: 0;
+}
+
 /* footer */
 .social-links .link{
     color: #fff;
@@ -350,6 +406,29 @@ input[type=checkbox]:checked {
     font-size: 20px;
 }
 
+.empty-checkout-cart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background:  rgba(34, 34, 34, 0.75);
+}
+
+.modal-cart{
+    position: fixed;
+    right: 50%;
+    max-width: 500px;
+    width: 100%;
+    min-height: 18vh;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+
 /********************************* About Us Page ****************************************/
 .about-us .image-wrapper{
     width: 100%;
@@ -402,7 +481,13 @@ input[type=checkbox]:checked {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    .modal-cart{
+        top: 50px;
+    }
+}
+
+@media (max-width: 767.98px) {
     h1{
         font-size: 26px;
     }
@@ -455,6 +540,10 @@ input[type=checkbox]:checked {
     .checkout .card .product .info .quantity-input .quantity-btn {
         width: 24px;
         height: 24px;
+    }
+    .modal-cart {
+        bottom: 0px;
+        min-height: 25vh;
     }
 }
 

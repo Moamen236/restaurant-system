@@ -17,53 +17,16 @@ $(function () {
     });
 
     // toggle Cart
-    $('#cart').on('mouseenter', function () {
-        if (!$('#toggle-show').hasClass('show')) {
-            $('#toggle-show').click();
+    $('#cart').hover(function () {
+        $('.body-overlay').toggleClass('d-none')
+    })
+
+    $('#cart .remove-btn').on('click', function () {
+        let dropdownMenu = $(this).parents().find(".dropdown-menu");
+        if(dropdownMenu.not(":visible")){
             $('.body-overlay').removeClass('d-none')
         }
     })
-
-    $('#cart').on('mouseleave', function () {
-        if ($('#toggle-show').hasClass('show')) {
-            $('#toggle-show').click()
-            $('.body-overlay').addClass('d-none')
-        }
-    })
-
-    // slick swiper
-    $('.menu-items').slick({
-        infinite: false,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: false,
-        // focusOnSelect: true,
-        rtl: true,
-        variableWidth: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
 
     // Add for qty for price
     let add = $('.add-qty');
@@ -109,5 +72,20 @@ $(function () {
             $('#add-product').modal('hide')
         }
     })
+
+
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: "auto",
+        spaceBetween: 25,
+        mousewheel: true,
+        focusableElements: "focused",
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
 });
