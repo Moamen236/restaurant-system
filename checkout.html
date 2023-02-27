@@ -27,7 +27,7 @@
 <body class="position-relative">
     <div class="body-overlay d-none"></div>
 
-    <div class="empty-checkout-cart">
+    <div class="empty-checkout-cart d-none">
         <div class="modal-cart bg-white p-4 border text-center d-flex flex-column justify-content-center align-items-center rounded">
             <h3>Less than the minimum order</h3>
             <button class="btn btn-main w-100 fw-bold mt-3 py-3">Add More</button>
@@ -48,9 +48,6 @@
                         </li>
                         <li class="nav-item px-2">
                             <a class="nav-link fw-semibold text-white" href="./about-us.html">نبذه عنا</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link fw-semibold text-white" href="./index.html">قوائمنا</a>
                         </li>
                         <li class="nav-item px-2">
                             <a class="nav-link fw-semibold text-white" href="./contact-us.html">اتصل بنا</a>
@@ -118,9 +115,6 @@
                         </li>
                         <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
                             <a class="nav-link fw-semibold" href="./about-us.html">نبذه عنا</a>
-                        </li>
-                        <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
-                            <a class="nav-link fw-semibold" href="./index.html">قوائمنا</a>
                         </li>
                         <li class="nav-item py-1 border border-bottom-1 border-top-0 border-end-0 border-start-0 px-2">
                             <a class="nav-link fw-semibold" href="./contact-us.html">اتصل بنا</a>
@@ -241,6 +235,9 @@
                                                 <span class="quantity-count mx-3">1</span>
                                                 <button type="button" class="btn btn-main quantity-btn subtract-qty" disable>
                                                     <i class="fa-solid fa-minus"></i>
+                                                </button> 
+                                                <button type="button" class="btn btn-danger quantity-btn subtract-qty mx-2">
+                                                    <i class="fa-solid fa-trash-can"></i>
                                                 </button> 
                                             </div>
                                             <div class="total-price">
